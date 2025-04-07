@@ -15,6 +15,7 @@ int main() {
     char results[SIZE][10];  // Array to store "Even" or "Odd"
 
     sockfd = socket(AF_INET, SOCK_DGRAM, 0);
+    printf("Socket created Successfully...\n");
     server_addr.sin_family = AF_INET;
     server_addr.sin_addr.s_addr = INADDR_ANY;
     server_addr.sin_port = htons(PORT);
