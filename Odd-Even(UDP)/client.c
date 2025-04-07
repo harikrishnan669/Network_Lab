@@ -12,6 +12,7 @@ int main() {
     int sockfd;
     struct sockaddr_in server_addr;
     socklen_t addr_len = sizeof(server_addr);
+    printf("Socket created Successfully...\n");
     int numbers[SIZE];
     char results[SIZE][10];
 
