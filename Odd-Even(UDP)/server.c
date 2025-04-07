@@ -19,6 +19,7 @@ int main() {
     server_addr.sin_addr.s_addr = INADDR_ANY;
     server_addr.sin_port = htons(PORT);
     bind(sockfd, (struct sockaddr *)&server_addr, sizeof(server_addr));
+    printf("Binding successfully created\n");
 
     recvfrom(sockfd, numbers, sizeof(numbers), 0, (struct sockaddr *)&client_addr, &addr_len);
 
