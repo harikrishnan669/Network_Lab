@@ -31,7 +31,7 @@ Simulate sliding window flow control protocols.
   <tr>
     <td><strong>Stop and Wait</strong>->Sends one frame at a time and waits for an acknowledgment before sending the next. Simple but inefficient for long-distance communication.</td>
     <td><strong>Go-Back-N</strong>->Allows sending multiple frames before needing an acknowledgment, but if an error occurs, all frames from the error onward are retransmitted.</td>
-    <td><strong>Selective Repeat</strong>->Sends multiple frames and retransmits only the specific frames that were lost or corrupted, making it more efficient than Go-Back-N.</td>
+    <td><strong>Selective Repeat</strong>->Sends multiple frames and retransmits only the specific frames that were lost or corrupted</td>
   </tr>
 </table>
   
