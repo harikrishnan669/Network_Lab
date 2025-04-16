@@ -38,3 +38,78 @@ Simulate sliding window flow control protocols.
 ### Time Request
 Implemented Time request
 
+First run the server code after that run client code.
+
+Here's how you can install **WSL (Windows Subsystem for Linux)** on a Windows 10 or Windows 11 machine:
+
+---
+
+### 🐧 **Install WSL via Command Line (Recommended for Windows 10/11)**
+
+1. **Open PowerShell as Administrator**  
+   - Search for **PowerShell** → Right-click → **Run as administrator**
+
+2. **Run this command** to install WSL and the default Ubuntu distribution:
+   ```powershell
+   wsl --install
+   ```
+
+   > ⚠️ If you're on Windows 10 and this gives an error, try:
+   ```powershell
+   wsl --set-default-version 2
+   ```
+You're running into two main issues in your terminal:
+
+---
+
+### ✅ 1. **Installing packages**
+
+Run the following to update your package lists and fix broken installs:
+
+```bash
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install -f
+```
+
+If that doesn't work, try cleaning and updating again:
+
+```bash
+sudo apt-get clean
+sudo apt-get update --fix-missing
+```
+
+---
+
+### ✅ 2. **Command `cc` not found**
+
+You're trying to compile a C file with `cc`, but `cc` (usually a symbolic link to GCC) is not installed yet.
+
+#### ✅ Fix:
+
+Install GCC:
+
+```bash
+sudo apt install gcc
+```
+
+Then you can compile your C file like this:
+
+```bash
+gcc server.c -o server
+```
+OR use
+```bash
+cc server.c
+```
+
+Then run it with:
+
+```bash
+./server
+```
+```bash
+./a.out
+```
+
+---
